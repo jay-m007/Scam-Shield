@@ -1,0 +1,18 @@
+{
+  "id": "generic-greeting",
+  "title": "Starts with 'Dear customer'",
+  "category": "pressure",
+  "weight": 8,
+  "why": "Real senders usually know your name. A generic greeting is a small sign that the message was sent to thousands of people.",
+  "patterns": [
+    "^\\s*(?:dear\\s+(?:customer|user|sir|madam|valued\\s+\\w+|account\\s+holder|client|member|winner|beneficiary)|respected\\s+(?:customer|sir|madam))\\b"
+  ],
+  "examples": [
+    "Dear customer, your account needs attention.",
+    "Dear valued member, please read the notice below."
+  ],
+  "safe": [
+    "Hi Ravi, your order has shipped.",
+    "Your OTP for login is 123456."
+  ]
+}

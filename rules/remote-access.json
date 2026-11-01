@@ -1,0 +1,19 @@
+{
+  "id": "remote-access",
+  "title": "Wants to control your phone or screen",
+  "category": "malware",
+  "weight": 45,
+  "why": "Remote-access apps let a stranger see your screen and OTPs and move money while you watch. Bank and refund staff never ask for them.",
+  "patterns": [
+    "\\b(?:install|download|open|share|enter|give)\\b[^.!?\\n]{0,40}?\\b(?:any\\s*desk|team\\s*viewer|quick\\s*support|rust\\s*desk|airdroid|screen\\s*shar\\w+)\\b",
+    "\\b(?:any\\s*desk|team\\s*viewer|quick\\s*support|rust\\s*desk|airdroid)\\b[^.!?\\n]{0,40}?\\b(?:code|id|number|pin)\\b"
+  ],
+  "examples": [
+    "To process your refund, install AnyDesk and tell me the 9 digit code.",
+    "Download TeamViewer QuickSupport and share your ID so I can fix the payment."
+  ],
+  "safe": [
+    "Our IT team will help you with your laptop setup on Monday.",
+    "Screen time report for this week: 4 hours daily."
+  ]
+}

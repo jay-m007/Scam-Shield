@@ -1,0 +1,20 @@
+{
+  "id": "contact-switch",
+  "title": "Moves you to WhatsApp or Telegram",
+  "category": "lure",
+  "weight": 14,
+  "why": "Scammers move you to private chats where there are no reports and no filters. 'Sorry, wrong number' starts many romance and investment scams.",
+  "patterns": [
+    "\\b(?:add|contact|message|text|chat\\s+with)\\s+(?:me\\s+)?(?:on|at|via)\\s+(?:whatsapp|telegram|signal)\\b",
+    "\\bwrong\\s+number\\b",
+    "\\b(?:move|shift|continue)\\b[^.!?\\n]{0,20}?\\b(?:to|on)\\s+(?:whatsapp|telegram)\\b"
+  ],
+  "examples": [
+    "Hi, sorry wrong number. You seem nice, add me on WhatsApp.",
+    "Let's move to Telegram to continue, it is more private."
+  ],
+  "safe": [
+    "I will message you on WhatsApp when I reach the station.",
+    "Call me when you are free."
+  ]
+}

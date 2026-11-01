@@ -1,0 +1,18 @@
+{
+  "id": "challan-scam",
+  "title": "Fake traffic fine",
+  "category": "impersonation",
+  "weight": 28,
+  "why": "Fake e-challan messages send you to a copy of a government site to collect card details. Real fines are checked on the official parivahan portal only.",
+  "patterns": [
+    "\\b(?:e-?challan|traffic\\s+(?:fine|challan)|challan)\\b[\\s\\S]{0,80}?\\b(?:pay|payment|link|apk|download|overdue|pending|court)\\b[\\s\\S]{0,80}?(?:https?:|www\\.|\\.apk|[a-z0-9-]+\\.(?:xyz|top|click|link|cc|info|online|site)\\b)"
+  ],
+  "examples": [
+    "Your vehicle has a pending traffic challan. Pay now to avoid court: https://echallan-pay.top/mh",
+    "e-Challan overdue, download app to pay: vahan_fine.apk"
+  ],
+  "safe": [
+    "Your challan of Rs 500 has been paid. Thank you.",
+    "Traffic will be heavy on the highway today."
+  ]
+}

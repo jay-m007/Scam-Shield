@@ -1,0 +1,22 @@
+{
+  "id": "authority-threat",
+  "title": "Claims police, CBI, customs or TRAI are after you",
+  "category": "threat",
+  "weight": 45,
+  "why": "No agency arrests anyone over a phone or video call, takes payment to close a case, or asks you to stay on the line. This is the 'digital arrest' scam that has cost people crores.",
+  "patterns": [
+    "\\bdigital\\s+arrest\\b",
+    "\\b(?:cbi|narcotics|ncb|enforcement\\s+directorate|customs|cyber\\s*crime|rbi|mumbai\\s+police|delhi\\s+police|police|supreme\\s+court|income\\s+tax\\s+(?:officer|department))\\b[^.!?\\n]{0,80}?\\b(?:arrest\\w*|warrant|fir|money\\s+laundering|drugs?|illegal|seiz\\w+|case\\s+(?:has\\s+been\\s+)?(?:registered|filed)|investigation|criminal)\\b",
+    "\\b(?:you\\s+are|your\\s+(?:name|aadhaar|number|sim|mobile)\\s+(?:is|has\\s+been))\\s+(?:under|involved|linked|found)[^.!?\\n]{0,40}?\\b(?:arrest|investigation|illegal|money\\s+laundering|crime|drugs?)\\b",
+    "\\b(?:trai|telecom\\s+department|department\\s+of\\s+telecom)\\b[^.!?\\n]{0,60}?\\b(?:disconnect\\w*|block\\w*|suspend\\w*)\\b"
+  ],
+  "examples": [
+    "This is CBI. A parcel in your name was found with drugs. You are under digital arrest, stay on video call.",
+    "TRAI notice: your mobile number will be disconnected in 2 hours due to illegal activity.",
+    "Mumbai Police has registered an FIR against your Aadhaar for money laundering."
+  ],
+  "safe": [
+    "RBI has announced new guidelines for digital payments.",
+    "Police verification for your passport is scheduled for 5 November at 11 am."
+  ]
+}

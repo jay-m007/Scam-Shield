@@ -1,0 +1,23 @@
+{
+  "id": "upi-collect",
+  "title": "Says you must enter a PIN or scan a QR to receive money",
+  "category": "money",
+  "weight": 45,
+  "why": "You never enter a PIN or scan a QR code to receive money. Doing either sends your money out. This is the trick behind most OLX and marketplace payment fraud.",
+  "patterns": [
+    "\\b(?:collect\\s+request|money\\s+request|payment\\s+request)\\b[^.!?\\n]{0,60}?\\b(?:approve|accept|enter\\s+(?:your\\s+)?(?:upi\\s+)?pin)\\b",
+    "\\benter\\s+(?:your\\s+)?(?:upi\\s+)?pin\\s+(?:to|and)\\s+(?:receive|get|claim|accept|credit|collect|unlock)\\b",
+    "\\bpin\\s+(?:is\\s+)?(?:required|needed|necessary)\\s+to\\s+(?:receive|get|claim|credit)\\b",
+    "\\bscan\\s+(?:this|the|my)\\s+(?:qr|barcode)(?:\\s+code)?\\s+to\\s+(?:receive|get|claim|collect)\\b",
+    "\\b(?:accept|approve)\\s+(?:the\\s+|this\\s+)?(?:upi\\s+)?(?:collect\\s+)?request\\s+to\\s+(?:receive|get|claim)\\b"
+  ],
+  "examples": [
+    "I have sent the payment, just scan this QR code to receive Rs 5000.",
+    "Approve the collect request and enter your UPI PIN to receive the advance.",
+    "PIN is required to receive money in your account."
+  ],
+  "safe": [
+    "Scan this QR code to pay Ravi Kumar Rs 500.",
+    "You have received Rs 500 from Ravi Kumar via UPI."
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "id": "investment-scam",
+  "title": "Promises guaranteed returns or stock tips",
+  "category": "money",
+  "weight": 32,
+  "why": "No genuine investment guarantees returns. Fake trading groups show fake profits on a fake app until you put in a large amount.",
+  "patterns": [
+    "\\b(?:guaranteed|assured|sure[- ]?shot|fixed)\\s+(?:\\w+\\s+)?(?:returns?|profit|income)\\b",
+    "\\b(?:double|triple|10x)\\s+(?:your\\s+)?(?:money|investment|capital)\\b",
+    "\\b(?:stock|share\\s+market|trading|ipo|crypto|forex|options)\\b[^.!?\\n]{0,60}?\\b(?:vip|premium|tips?|signals?|calls?)\\b[^.!?\\n]{0,40}?\\b(?:group|channel|whatsapp|telegram)\\b",
+    "\\b\\d{2,3}\\s*%\\s*(?:returns?|profit|interest)\\b[^.!?\\n]{0,30}?\\b(?:daily|weekly|monthly|per\\s+(?:day|week|month))\\b"
+  ],
+  "examples": [
+    "Join our VIP stock tips group on WhatsApp. Guaranteed returns every week!",
+    "Invest Rs 10,000 and get 30% returns monthly, assured profit."
+  ],
+  "safe": [
+    "Your SIP of Rs 500 has been processed for HDFC Index Fund.",
+    "Fixed deposit matured. Interest credited to your account."
+  ]
+}

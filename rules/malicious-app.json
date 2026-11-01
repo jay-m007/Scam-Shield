@@ -1,0 +1,19 @@
+{
+  "id": "malicious-app",
+  "title": "Asks you to install an app from a message",
+  "category": "malware",
+  "weight": 40,
+  "why": "Apps sent in messages can read your SMS, including OTPs, and take over your banking apps. The Play Store is the only safe place to install from.",
+  "patterns": [
+    "\\b[\\w-]+\\.apk\\b",
+    "\\b(?:download|install|open)\\b[^.!?\\n]{0,30}?\\b(?:apk|app)\\b[^.!?\\n]{0,60}?\\b(?:kyc|reward|verify|verification|bill|update|challan|aadhaar|pan|refund|cashback)\\b"
+  ],
+  "examples": [
+    "Your account is blocked. Install SBI_KYC_Update.apk to continue.",
+    "Download the new app to verify your electricity bill and avoid disconnection."
+  ],
+  "safe": [
+    "Download the official HDFC app from the Play Store for easy banking.",
+    "Your app update is ready in the Play Store."
+  ]
+}

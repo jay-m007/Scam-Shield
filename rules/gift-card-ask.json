@@ -1,0 +1,19 @@
+{
+  "id": "gift-card-ask",
+  "title": "Asks you to buy gift cards",
+  "category": "money",
+  "weight": 35,
+  "why": "Gift card codes can be spent instantly and cannot be traced. 'Your boss' asking for them in a hurry is a well-known fraud.",
+  "patterns": [
+    "\\b(?:buy|purchase|get)\\b[^.!?\\n]{0,30}?\\b(?:gift\\s+cards?|google\\s+play\\s+cards?|amazon\\s+(?:pay\\s+)?cards?|itunes)\\b[^.!?\\n]{0,60}?\\b(?:send|share|scratch|code|pin)\\b",
+    "\\b(?:are\\s+you\\s+(?:free|available|at\\s+your\\s+desk)|need\\s+a\\s+(?:quick\\s+)?favou?r)\\b[^.!?\\n]{0,60}?\\b(?:gift\\s+cards?|vouchers?|urgent)\\b"
+  ],
+  "examples": [
+    "I'm in a meeting. Buy 5 Amazon gift cards and send the codes here, I will pay you back.",
+    "Are you free? Need a quick favour, urgent gift cards for a client."
+  ],
+  "safe": [
+    "I bought you a gift card for your birthday.",
+    "Amazon gift card of Rs 500 has been added to your account."
+  ]
+}

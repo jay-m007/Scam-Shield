@@ -1,0 +1,18 @@
+{
+  "id": "call-this-number",
+  "title": "Asks you to call a mobile number",
+  "category": "pressure",
+  "weight": 10,
+  "why": "Banks and agencies do not ask you to call a personal mobile number about money or blocking. Look up the official number yourself.",
+  "patterns": [
+    "\\b(?:call|contact|whatsapp|dial|reach)\\b[^.!?\\n\\d]{0,30}?(?:\\+?91[\\s-]?)?[6-9]\\d{4}[\\s-]?\\d{5}\\b"
+  ],
+  "examples": [
+    "For help contact our officer on 9876543210.",
+    "Call +91 98765 43210 right now."
+  ],
+  "safe": [
+    "Call 1800-123-4567 for support.",
+    "Reach us at help@example.com."
+  ]
+}

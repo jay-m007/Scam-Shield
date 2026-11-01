@@ -1,0 +1,18 @@
+{
+  "id": "account-block-threat",
+  "title": "Threatens to block your account or card",
+  "category": "impersonation",
+  "weight": 28,
+  "why": "Scammers invent a deadline so you act before thinking. A real bank sends you a letter and lets you visit a branch.",
+  "patterns": [
+    "\\b(?:account|a/c|card|wallet|sim|upi\\s+id)\\b[^.!?\\n]{0,40}?\\b(?:will\\s+be|going\\s+to\\s+be|about\\s+to\\s+be|shall\\s+be|has\\s+been|is|are|may\\s+be|get)\\b\\s+(?:\\w+\\s+){0,2}?(?:block\\w*|suspend\\w*|freez\\w+|frozen|deactivat\\w*|clos(?:e|ed|ure)|restrict\\w*)\\b(?=[\\s\\S]{0,140}?(?:click|call|update|verify|visit|link|contact|avoid|https?:|www\\.|reply|\\b\\d{10}\\b))"
+  ],
+  "examples": [
+    "Your account will be suspended within 24 hours. Click the link to avoid closure: https://sbi-help.xyz",
+    "Your SIM is going to be blocked tonight. Call 9876543210 to avoid this."
+  ],
+  "safe": [
+    "Your card ending 4821 has been blocked as per your request.",
+    "Your account balance is Rs 1,240.50."
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "id": "fake-kyc",
+  "title": "Says your KYC, PAN or Aadhaar needs urgent action",
+  "category": "impersonation",
+  "weight": 30,
+  "why": "KYC updates never happen through a text link or a phone call. This is the most common bank-fraud message in India.",
+  "patterns": [
+    "\\b(?:kyc|pan|aadhaar|aadhar|e-?kyc)\\b[^.!?\\n]{0,50}?\\b(?:update[sd]?|expire[sd]?|suspend\\w*|block\\w*|verif\\w+|pending|incomplete|invalid|deactivat\\w*|lapse[sd]?|mandatory)\\b",
+    "(?:केवाईसी|खाता\\s*(?:बंद|ब्लॉक))"
+  ],
+  "ignoreIf": "\\b(?:has|have)\\s+been\\b|\\bsuccessfully\\b|\\bcompleted\\b|\\bthank\\s+you\\b",
+  "examples": [
+    "Dear customer your SBI KYC is pending and your account will be blocked today. Update now.",
+    "Your PAN card is invalid, verify immediately or your account will be deactivated.",
+    "आपका केवाईसी अपडेट नहीं है, खाता बंद हो जाएगा।"
+  ],
+  "safe": [
+    "Your KYC has been updated successfully. Thank you for banking with us.",
+    "Aadhaar number verification completed for your SIM."
+  ]
+}

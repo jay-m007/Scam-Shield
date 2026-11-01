@@ -1,0 +1,19 @@
+{
+  "id": "urgency",
+  "title": "Rushes you to act",
+  "category": "pressure",
+  "weight": 12,
+  "why": "A short deadline is the oldest trick: it stops you from checking. Genuine organisations give you days, not minutes.",
+  "patterns": [
+    "\\b(?:immediately|urgent(?:ly)?|within\\s+\\d+\\s*(?:hours?|hrs?|minutes?|mins?)|today\\s+only|last\\s+chance|final\\s+(?:notice|warning|reminder)|act\\s+now|expires?\\s+(?:today|tonight|soon)|right\\s+away|turant|jaldi)\\b",
+    "\\b(?:will\\s+be|get)\\s+(?:permanently\\s+)?(?:disconnected|blocked|suspended|cancelled|deactivated)\\s+(?:today|tonight|tomorrow|by|at)\\b"
+  ],
+  "examples": [
+    "Act now, your offer expires today!",
+    "Reply immediately or your service will be disconnected."
+  ],
+  "safe": [
+    "Your OTP is valid for 10 minutes.",
+    "Your order will be delivered by Friday."
+  ]
+}

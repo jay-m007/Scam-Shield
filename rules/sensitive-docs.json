@@ -1,0 +1,19 @@
+{
+  "id": "sensitive-docs",
+  "title": "Asks you to send ID documents",
+  "category": "credentials",
+  "weight": 25,
+  "why": "Copies of your ID and a selfie are enough for scammers to open loan accounts or SIM cards in your name.",
+  "patterns": [
+    "\\b(?:send|share|upload|email|whatsapp|forward)\\b[^.!?\\n]{0,30}?\\b(?:aadhaar|aadhar|pan\\s*card|selfie|passport|id\\s+proof|bank\\s+statement|cancelled\\s+cheque)\\b"
+  ],
+  "ignoreIf": "\\b(?:do\\s+not|don'?t|dont|never|not\\s+to|mat)\\s+(?:ever\\s+|please\\s+|kindly\\s+)?(?:share|send|tell|give|forward|provide|read\\s+out|enter|bata\\w*|bhej\\w*)\\b|\\b(?:na|nahi|mat)\\s+(?:karein|kare|kijiye|batayein|bataye|batana|dena|dein|bhejein|karna)\\b",
+  "examples": [
+    "Send a photo of your Aadhaar card and a selfie holding it to get the loan.",
+    "Please upload your PAN card and bank statement on WhatsApp to confirm the job."
+  ],
+  "safe": [
+    "Do not share your Aadhaar copy with unknown people.",
+    "Your PAN card application has been received."
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "advance-fee",
+  "title": "Asks for a fee before you get something",
+  "category": "money",
+  "weight": 28,
+  "why": "Genuine winnings, jobs, parcels and loans do not need you to pay first. The fee is the scam.",
+  "patterns": [
+    "\\b(?:processing|clearance|customs|insurance|handling|release)\\s+(?:fee|charges?|duty|deposit|amount)\\b[^.!?\\n]{0,60}?\\b(?:pay|transfer|deposit|send|remit)\\b",
+    "\\b(?:pay|transfer|deposit|send)\\b[^.!?\\n]{0,40}?\\b(?:rs\\.?|₹|inr)\\s*\\d[\\d,]*\\b[^.!?\\n]{0,40}?\\b(?:to\\s+(?:release|receive|claim|unlock|get)|for\\s+(?:release|clearance|processing))\\b"
+  ],
+  "examples": [
+    "Pay Rs 4,500 as customs fee to release your gift parcel.",
+    "Transfer Rs 2,000 to release your prize amount today."
+  ],
+  "safe": [
+    "Pay the exam registration fee at the college counter before 5 pm.",
+    "Your parcel was delivered. No further payment is due."
+  ]
+}

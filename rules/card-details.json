@@ -1,0 +1,19 @@
+{
+  "id": "card-details",
+  "title": "Asks for card or net banking details",
+  "category": "credentials",
+  "weight": 35,
+  "why": "Real banks already have your card details. A message asking you to send or confirm them is collecting them to spend your money.",
+  "patterns": [
+    "\\b(?:send|share|enter|provide|confirm|update|verify|submit)\\b[^.!?\\n]{0,30}?\\b(?:card\\s+number|card\\s+details|card\\s+expiry|expiry\\s+date|debit\\s+card|credit\\s+card|net\\s?banking\\s+(?:id|password|details)|login\\s+details|account\\s+number)\\b"
+  ],
+  "ignoreIf": "\\b(?:do\\s+not|don'?t|dont|never|not\\s+to|mat)\\s+(?:ever\\s+|please\\s+|kindly\\s+)?(?:share|send|tell|give|forward|provide|read\\s+out|enter|bata\\w*|bhej\\w*)\\b|\\b(?:na|nahi|mat)\\s+(?:karein|kare|kijiye|batayein|bataye|batana|dena|dein|bhejein|karna)\\b",
+  "examples": [
+    "Please confirm your debit card number and expiry date to avoid blocking.",
+    "Enter your net banking password and card details at the link to continue."
+  ],
+  "safe": [
+    "Do not share your card details with anyone.",
+    "Your credit card ending 4821 was used for Rs 450 at BigBasket."
+  ]
+}

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; manifest-src 'self'; worker-src 'self'; connect-src 'self'; form-action 'none'; base-uri 'none'">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#101c33">
+<meta name="referrer" content="no-referrer">
+<title>Scam Shield</title>
+<meta name="description" content="Paste a suspicious SMS or WhatsApp message and see exactly which words give it away. Runs on your device, nothing is uploaded.">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<script src="theme-init.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="bar">
+  <div class="brand">
+    <svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 6 54 14v18c0 14-9 23-22 28C19 55 10 46 10 32V14z" fill="currentColor"/><rect x="19" y="27" width="26" height="9" rx="2" fill="var(--hl)" transform="rotate(-5 32 31)"/></svg>
+    <span>Scam Shield</span>
+  </div>
+  <button id="modeBtn" class="btn small ghost" type="button">Auto</button>
+</header>
+
+<main id="main" class="wrap">
+  <section class="hero">
+    <h1>Got a message that feels off?</h1>
+    <p class="lead">Paste it below. Scam Shield highlights the words that give it away and tells you what to do. It all happens on your phone, and nothing is uploaded.</p>
+  </section>
+
+  <section class="slip" aria-labelledby="inLabel">
+    <label id="inLabel" for="msg">Paste the SMS or WhatsApp message</label>
+    <textarea id="msg" rows="6" maxlength="5000" spellcheck="false" autocomplete="off" placeholder="Dear customer, your account will be blocked today. Update your KYC now: http://..."></textarea>
+    <div class="row">
+      <button id="checkBtn" class="btn primary" type="button">Check message</button>
+      <button id="clearBtn" class="btn ghost" type="button">Clear</button>
+      <span id="count" class="count" aria-hidden="true"></span>
+    </div>
+    <div class="samples">
+      <span class="samples-label">Try an example</span>
+      <div id="samples" class="chips"></div>
+    </div>
+  </section>
+
+  <div id="result" class="result" aria-live="polite"></div>
+
+  <section class="about" aria-labelledby="howH">
+    <h2 id="howH">How it decides</h2>
+    <p>It looks for the patterns behind common Indian scams: fake KYC and bank alerts, UPI collect requests, digital-arrest threats, parcel and electricity-bill messages, paid-task jobs and more. It also takes apart every link without opening it.</p>
+    <p><strong>It cannot prove a message is safe.</strong> If a message asks for money, an OTP or a PIN, stop and call the company on the number printed on its official website or on the back of your card.</p>
+    <p id="ruleCount" class="muted"></p>
+  </section>
+</main>
+
+<footer class="foot">
+  <p>Open source and free. <a href="https://github.com/jay-m007/Scam-Shield" rel="noopener noreferrer">See the code</a> · <a href="https://github.com/jay-m007/Scam-Shield/blob/main/CONTRIBUTING.md" rel="noopener noreferrer">Add a scam pattern</a> · <a href="https://github.com/jay-m007/Scam-Shield/issues/new/choose" rel="noopener noreferrer">Report a missed scam</a></p>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>

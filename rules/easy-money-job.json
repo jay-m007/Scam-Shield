@@ -1,0 +1,19 @@
+{
+  "id": "easy-money-job",
+  "title": "Offers a job that pays a lot for little work",
+  "category": "lure",
+  "weight": 25,
+  "why": "Offers of big daily pay for part-time or home work, with no skills needed, are how task and deposit scams start. Check the company before replying.",
+  "patterns": [
+    "\\b(?:part[- ]?time|work\\s+from\\s+home|wfh|online\\s+job)\\b[^.!?\\n]{0,80}?\\b(?:earn|income|salary|daily|per\\s+day|job|vacancy|hiring|opportunity)\\b",
+    "\\bearn\\w*\\b[^.!?\\n]{0,30}?(?:rs\\.?|₹|inr)?\\s*\\d[\\d,]*\\s*(?:rs|rupees)?\\s*(?:\\/|per|a|every)?\\s*(?:day|daily|hour|week)\\b"
+  ],
+  "examples": [
+    "Work from home, earn 3000 per day, no experience needed.",
+    "Part time job vacancy, earn Rs 5000 daily with your phone."
+  ],
+  "safe": [
+    "We are hiring a full-time accountant. Apply on our careers page.",
+    "Your interview for the software engineer role is on Monday at 10 am."
+  ]
+}

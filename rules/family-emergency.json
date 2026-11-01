@@ -1,0 +1,20 @@
+{
+  "id": "family-emergency",
+  "title": "Pretends to be a relative with a new number",
+  "category": "impersonation",
+  "weight": 30,
+  "why": "The 'Hi Mum, this is my new number' message copies a real relative to ask for urgent money. Call the person on their old number before sending anything.",
+  "patterns": [
+    "\\b(?:new|changed|another)\\s+(?:phone\\s+)?number\\b[^.!?\\n]{0,60}?\\b(?:send|transfer|pay|money|urgent\\w*|emergency|gpay|upi)\\b",
+    "\\b(?:lost|broke|broken|damaged|dropped)\\s+(?:my\\s+)?(?:old\\s+)?phone\\b[^.!?\\n]{0,80}?\\b(?:send|transfer|pay|money|urgent\\w*|gpay|upi)\\b",
+    "\\b(?:hi|hello|hey)\\s+(?:mom|mum|mummy|dad|papa|maa)\\b[^.!?\\n]{0,80}?\\b(?:new\\s+number|lost\\s+(?:my\\s+)?phone)\\b"
+  ],
+  "examples": [
+    "Hi Mum, I lost my phone, this is my new number. Please send Rs 15,000 urgently on GPay.",
+    "Hello papa this is my new number, need money transfer for an emergency."
+  ],
+  "safe": [
+    "I changed my number, please save the new one for future.",
+    "Hi mom, reached home safely."
+  ]
+}

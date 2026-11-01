@@ -1,0 +1,21 @@
+{
+  "id": "otp-share",
+  "title": "Asks you to share an OTP, PIN or password",
+  "category": "credentials",
+  "weight": 40,
+  "why": "Nobody from a bank, app or government office ever needs your OTP, PIN or password. Anyone asking for it is trying to move money out of your account.",
+  "patterns": [
+    "\\b(?:share|send|tell|give|forward|provide|read\\s+out|dictate|bata\\w*|bhej\\w*)\\b[^.!?\\n]{0,40}?\\b(?:otp|pin|cvv|password|passcode)\\b",
+    "\\b(?:otp|pin|cvv|password|passcode)\\b[^.!?\\n]{0,25}?\\b(?:share|send|tell|give|forward|read\\s+out|bata\\w*|bhej\\w*)\\b"
+  ],
+  "ignoreIf": "\\b(?:do\\s+not|don'?t|dont|never|not\\s+to|mat)\\s+(?:ever\\s+|please\\s+|kindly\\s+)?(?:share|send|tell|give|forward|provide|read\\s+out|enter|bata\\w*|bhej\\w*)\\b|\\b(?:na|nahi|mat)\\s+(?:karein|kare|kijiye|batayein|bataye|batana|dena|dein|bhejein|karna)\\b",
+  "examples": [
+    "Please share the OTP you just received to complete your verification.",
+    "Sir OTP batao jaldi, otherwise your account will be closed.",
+    "To get your refund, tell me the 6 digit OTP and your UPI PIN."
+  ],
+  "safe": [
+    "Your OTP is 482913. Do not share it with anyone. Valid for 10 minutes.",
+    "Never share your UPI PIN, OTP or CVV with anyone, including bank staff."
+  ]
+}

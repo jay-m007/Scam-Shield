@@ -1,0 +1,20 @@
+{
+  "id": "refund-lure",
+  "title": "Dangles a refund or cashback",
+  "category": "money",
+  "weight": 28,
+  "why": "A 'refund' that needs your PIN, a QR scan or an app is a way to take money. 'Sent by mistake, please return it' is another common trick.",
+  "patterns": [
+    "\\b(?:refund|reversal|excess\\s+(?:charge|payment|amount)|cashback)\\b[^.!?\\n]{0,60}?\\b(?:claim|apply|verify|share|enter|scan|download)\\b",
+    "\\b(?:click|tap)\\b[^.!?\\n]{0,30}?\\bto\\s+(?:claim|get|receive)\\s+(?:your\\s+)?(?:refund|reversal|cashback)\\b",
+    "\\b(?:sent|transferred|credited|paid)\\b[^.!?\\n]{0,40}?\\b(?:by\\s+mistake|wrongly|wrong\\s+number)\\b[^.!?\\n]{0,80}?\\b(?:return|send\\s+(?:it\\s+)?back|refund|reverse)\\b"
+  ],
+  "examples": [
+    "Your refund is ready, verify your card details to claim it now.",
+    "I sent Rs 5000 to your number by mistake, please send it back urgently."
+  ],
+  "safe": [
+    "Refund of Rs 200 initiated for order 12345. It will reflect in 5-7 working days.",
+    "Your cashback of Rs 20 has been credited to your wallet."
+  ]
+}

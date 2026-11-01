@@ -1,0 +1,19 @@
+{
+  "id": "job-task-scam",
+  "title": "Pays you to like, rate or review, then moves to Telegram",
+  "category": "lure",
+  "weight": 40,
+  "why": "Paid-task scams pay a small amount first to build trust, then ask you to 'deposit' larger sums that you never see again.",
+  "patterns": [
+    "\\b(?:like|subscribe|rate|review)\\b[^.!?\\n]{0,40}?\\b(?:youtube|videos?|hotels?|products?|google\\s+maps?|channels?)\\b[^.!?\\n]{0,60}?\\b(?:earn|rs\\.?|₹|paid|commission|income)\\b",
+    "\\b(?:join|contact|message)\\b[^.!?\\n]{0,30}?\\b(?:telegram|whatsapp)\\b[^.!?\\n]{0,40}?\\b(?:tasks?|jobs?|earn\\w*|commission)\\b"
+  ],
+  "examples": [
+    "Like YouTube videos and earn Rs 50 for each one. Join our Telegram group for daily tasks.",
+    "Rate hotels on Google Maps and get paid. Message us on WhatsApp to start earning work."
+  ],
+  "safe": [
+    "I will join the WhatsApp group for the class project.",
+    "Please review the document and send comments by Friday."
+  ]
+}

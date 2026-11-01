@@ -1,0 +1,19 @@
+{
+  "id": "sextortion",
+  "title": "Threatens to leak a video or photos",
+  "category": "threat",
+  "weight": 45,
+  "why": "This is blackmail. Paying never stops it, because the person asks again. They often have nothing at all and are bluffing.",
+  "patterns": [
+    "\\b(?:video|nude|nudes|private\\s+(?:photos?|pictures?|video)|screen\\s*recording|recorded)\\b[^.!?\\n]{0,60}?\\b(?:leak\\w*|viral|upload\\w*|post\\w*|send\\s+(?:it\\s+)?to\\s+your|share\\s+(?:it\\s+)?with\\s+your)\\b[^.!?\\n]{0,60}?\\b(?:contacts|family|friends|relatives|colleagues)\\b",
+    "\\b(?:i|we)\\s+(?:have|got)\\b[^.!?\\n]{0,30}?\\b(?:recorded|recording|your\\s+video|your\\s+(?:nude|private)|screenshots?)\\b"
+  ],
+  "examples": [
+    "I have recorded your video call. Pay Rs 20,000 or I will send it to your family and friends.",
+    "Your private video will go viral and be shared with your contacts unless you pay."
+  ],
+  "safe": [
+    "Your video has been uploaded to YouTube successfully.",
+    "I recorded the lecture for you. Sharing it with the class group."
+  ]
+}

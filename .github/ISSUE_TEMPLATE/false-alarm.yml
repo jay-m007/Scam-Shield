@@ -1,0 +1,25 @@
+name: Report a false alarm
+description: Scam Shield called a genuine message a scam.
+title: "False alarm: "
+labels: ["false-positive"]
+body:
+  - type: markdown
+    attributes:
+      value: "**Remove personal details before you paste** (names, numbers, account digits, OTPs)."
+  - type: textarea
+    id: message
+    attributes:
+      label: The genuine message
+    validations:
+      required: true
+  - type: input
+    id: sign
+    attributes:
+      label: Which sign was wrong?
+      description: The title of the rule or link warning that should not have appeared.
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: How do you know it is genuine?

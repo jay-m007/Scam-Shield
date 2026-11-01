@@ -1,0 +1,19 @@
+{
+  "id": "electricity-bill",
+  "title": "Threatens to cut your electricity tonight",
+  "category": "impersonation",
+  "weight": 30,
+  "why": "Power companies do not cut supply at 9:30 tonight because of a text message. The number in the message connects you to a fraudster.",
+  "patterns": [
+    "\\b(?:electricity|power|bijli|light)\\b[^.!?\\n]{0,60}?\\b(?:disconnect\\w*|will\\s+be\\s+(?:cut|off)|unpaid|tonight)\\b",
+    "\\bbill\\b[^.!?\\n]{0,50}?\\bnot\\s+(?:been\\s+)?(?:updated|paid)\\b[^.!?\\n]{0,80}?\\b(?:disconnect\\w*|tonight|9[:.]?30)\\b"
+  ],
+  "examples": [
+    "Dear consumer your electricity power will be disconnected tonight at 9.30 pm because previous month bill was not updated. Call 9876543210.",
+    "Bijli bill unpaid, connection will be cut tonight. Contact officer now."
+  ],
+  "safe": [
+    "Electricity bill of Rs 840 generated for October. Due date 12 Nov.",
+    "Your power supply has been restored."
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "parcel-scam",
+  "title": "Says a parcel is stuck or illegal",
+  "category": "impersonation",
+  "weight": 28,
+  "why": "Fake courier messages say a parcel is held and send you to a link that collects card details or a fee. Others claim it has drugs in it to start a 'digital arrest'.",
+  "patterns": [
+    "\\b(?:parcel|courier|package|shipment|consignment)\\b[^.!?\\n]{0,60}?\\b(?:held|stuck|seized|customs|undelivered|(?:delivery\\s+)?failed|on\\s+hold|illegal|contraband|incomplete\\s+address|address\\s+(?:is\\s+)?(?:incomplete|invalid))\\b",
+    "\\b(?:redeliver\\w*|re-?schedul\\w+)\\b[^.!?\\n]{0,40}?\\b(?:delivery|parcel|package)\\b[\\s\\S]{0,60}(?:https?:|www\\.)"
+  ],
+  "examples": [
+    "Your parcel is on hold at customs. Pay Rs 49 redelivery fee: http://dhl-in.top/pay",
+    "FedEx: a package in your name has been seized as it contains illegal items."
+  ],
+  "safe": [
+    "Your Amazon package will be delivered today between 2 pm and 6 pm.",
+    "Your courier from Delhivery has been delivered."
+  ]
+}

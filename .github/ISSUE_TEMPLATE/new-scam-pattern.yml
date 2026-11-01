@@ -1,0 +1,34 @@
+name: Report a scam Scam Shield missed
+description: You got a scam message and Scam Shield said it looked fine.
+title: "Missed scam: "
+labels: ["new-pattern"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you. **Remove your name, phone numbers, account numbers and any OTP before you paste.** Replace them with X.
+  - type: textarea
+    id: message
+    attributes:
+      label: The message (with personal details removed)
+      placeholder: Dear customer, your electricity will be cut tonight...
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: What makes it a scam?
+      description: What is it trying to get you to do?
+    validations:
+      required: true
+  - type: dropdown
+    id: channel
+    attributes:
+      label: Where did it arrive?
+      options: [SMS, WhatsApp, Telegram, Email, Phone call, Other]
+  - type: checkboxes
+    id: pr
+    attributes:
+      label: Want to fix it yourself?
+      options:
+        - label: I will send a pull request that adds a rule (see CONTRIBUTING.md, it takes about two minutes)

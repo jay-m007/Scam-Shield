@@ -1,0 +1,20 @@
+{
+  "id": "secrecy-pressure",
+  "title": "Tells you to keep it secret or stay on a video call",
+  "category": "pressure",
+  "weight": 14,
+  "why": "Scammers isolate you so no one can tell you it is a scam. A genuine officer or bank will always let you check with someone.",
+  "patterns": [
+    "\\b(?:do\\s+not|don'?t|dont|never)\\s+(?:\\w+\\s+){0,2}?(?:tell|inform|disclose|speak\\s+to|talk\\s+to)\\b[^.!?\\n]{0,40}?\\b(?:anyone|anybody|family|bank|police|relatives|others?)\\b",
+    "\\bkeep\\s+(?:this\\s+)?(?:strictly\\s+)?(?:confidential|secret)\\b",
+    "\\b(?:stay|remain)\\s+on\\s+(?:the\\s+)?video\\s+call\\b"
+  ],
+  "examples": [
+    "Do not tell anyone about this case, stay on the video call until we finish.",
+    "This is strictly confidential. Do not inform your bank or family."
+  ],
+  "safe": [
+    "Do not share OTP with anyone.",
+    "Please stay on the line while we transfer you to the billing team."
+  ]
+}

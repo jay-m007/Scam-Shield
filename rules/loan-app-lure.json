@@ -1,0 +1,19 @@
+{
+  "id": "loan-app-lure",
+  "title": "Offers an instant loan with no checks",
+  "category": "lure",
+  "weight": 25,
+  "why": "Illegal loan apps and advance-fee scams take a 'processing fee' first, or steal your contacts and threaten you later.",
+  "patterns": [
+    "\\b(?:instant|pre-?approved|quick|easy|urgent)\\s+(?:personal\\s+)?loan\\b[^.!?\\n]{0,100}?\\b(?:no\\s+(?:cibil|documents?|kyc|income\\s+proof)|without\\s+(?:cibil|documents?|collateral)|download|apk)\\b",
+    "\\bloan\\b[^\\n]{0,60}?\\b(?:approved|sanctioned)\\b[^\\n]{0,80}?\\b(?:processing\\s+fee|insurance|pay|deposit)\\b[^\\n]{0,40}?\\b(?:first|before|advance|upfront)\\b"
+  ],
+  "examples": [
+    "Instant loan up to 5 lakh, no CIBIL check, download our app now.",
+    "Your loan is approved. Pay the processing fee first and money comes in 10 minutes."
+  ],
+  "safe": [
+    "Your home loan EMI of Rs 18,200 is due on 5 November.",
+    "Pre-approved personal loan for you. Visit your nearest HDFC branch."
+  ]
+}
